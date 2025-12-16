@@ -1,302 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CineSend Pricing</title>
-  <style>
-    :root {
-      --blue: #205af7;
-      --light-blue: #eaf1ff;
-      --bg: #f6f7fb;
-      --text: #0b0f19;
-      --muted: #6b7280;
-      --card: #ffffff;
-      --border: #e5e7eb;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-    .nav {
-      background: var(--light-blue);
-      padding: 20px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-logo { font-size: 20px; font-weight: 800; }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      font-size: 15px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-    }
-    .nav-cta {
-      border: 2px solid var(--blue);
-      padding: 10px 18px;
-      border-radius: 10px;
-      color: var(--blue);
-      font-weight: 700;
-    }
-    .hero {
-      background: var(--light-blue);
-      padding: 120px 24px 96px;
-    }
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      font-size: 64px;
-      line-height: 1.05;
-      margin-bottom: 24px;
-      letter-spacing: -0.02em;
-    }
-    .hero h1 span { color: var(--blue); }
-    .hero p {
-      font-size: 20px;
-      max-width: 720px;
-      color: var(--muted);
-    }
-    .section {
-      padding: 96px 24px;
-    }
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .section-header {
-      margin-bottom: 48px;
-    }
-    .section-header h2 {
-      font-size: 40px;
-      margin-bottom: 12px;
-    }
-    .section-header p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 720px;
-    }
-    .context-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-bottom: 64px;
-    }
-    .context {
-      background: #fff;
-      border-radius: 16px;
-      padding: 28px;
-      border: 1px solid var(--border);
-    }
-    .context h4 {
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-    .context p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 40px 32px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      border: 2px solid transparent;
-      display: flex;
-      flex-direction: column;
-    }
-    .card.recommended { border-color: var(--blue); }
-    .badge {
-      align-self: flex-start;
-      background: rgba(32,90,247,0.1);
-      color: var(--blue);
-      font-weight: 600;
-      font-size: 13px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      margin-bottom: 16px;
-    }
-    .plan-name {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .price {
-      font-size: 42px;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-    .price span {
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--muted);
-    }
-    .plan-desc {
-      color: var(--muted);
-      margin-bottom: 24px;
-      font-size: 15px;
-    }
-    .btn-primary {
-      background: var(--blue);
-      color: #fff;
-      border-radius: 12px;
-      padding: 16px;
-      font-size: 16px;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      margin-top: auto;
-    }
-    .btn-outline {
-      background: #111827;
-      color: #fff;
-      border-radius: 12px;
-      padding: 16px;
-      font-size: 16px;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      margin-top: auto;
-    }
-    @media (max-width: 900px) {
-      .pricing-grid, .context-row { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 44px; }
-    }
-  </style>
-</head>
-<body>
-  <div class="nav">
-    <div class="nav-logo">CineSend</div>
-    <div class="nav-links">
-      <a href="#">Products</a>
-      <a href="#">Solutions</a>
-      <a href="#">Resources</a>
-      <a href="#">Pricing</a>
-      <a href="#" class="nav-cta">Book a demo</a>
-    </div>
-  </div>
-
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Pricing to meet your <br><span>business needs</span></h1>
-      <p>The ultimate toolkit to secure screeners, buying, and video on demand streaming.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-header">
-        <h2>CineSend OTT</h2>
-        <p>Secure OTT solutions for media & entertainment, awards, and airlines.</p>
-      </div>
-
-      <div class="context-row">
-        <div class="context">
-          <h4>M&E</h4>
-          <p>Studios and distributors delivering secure screeners.</p>
-        </div>
-        <div class="context">
-          <h4>Awards</h4>
-          <p>High-security awards screening platforms.</p>
-        </div>
-        <div class="context">
-          <h4>Airlines</h4>
-          <p>Inflight entertainment delivery.</p>
-        </div>
-      </div>
-
-      <div class="pricing-grid">
-        <div class="card">
-          <div class="plan-name">Starter</div>
-          <div class="price">$997 <span>/ month</span></div>
-          <div class="plan-desc">Launch secure OTT quickly.</div>
-          <a href="#" class="btn-primary">Get started</a>
-          <ul class="features">
-  <li><span class="check">✓</span> Secure watermark-protected screeners</li>
-  <li><span class="check">✓</span> Limited storage</li>
-  <li><span class="check">✓</span> Basic sharing controls</li>
-          </ul>
-        </div>
-        
-
-        <div class="card recommended">
-          <div class="badge">Most popular</div>
-          <div class="plan-name">Pro</div>
-          <div class="price">$2497 <span>/ month</span></div>
-          <div class="plan-desc">Advanced security and analytics.</div>
-          <a href="#" class="btn-primary">Get started</a>
-        </div>
-
-        <div class="card">
-          <div class="plan-name">Enterprise</div>
-          <div class="price">Custom</div>
-          <div class="plan-desc">Custom scale and integrations.</div>
-          <a href="#" class="btn-outline">Contact sales</a>
-        </div>
-      </div>
-    </div>
-    <!-- FILES SECTION -->
 <section class="section">
   <div class="section-inner">
     <div class="section-header">
-      <h2>CineSend Files</h2>
+      <h2>OTT Pricing</h2>
       <p>
-        Secure file delivery, storage, and review workflows built for film,
-        TV, and professional media teams.
+        Secure, branded OTT experiences for media & entertainment, awards programs,
+        and large-scale distribution.
       </p>
     </div>
 
     <div class="pricing-grid">
-      <!-- FILES TRIAL -->
+      <!-- OTT STARTER -->
       <div class="card">
-        <div class="plan-name">Free Trial</div>
-        <div class="price">$0</div>
-        <div class="plan-desc">
-          Try CineSend Files with limited storage and core security features.
-        </div>
+        <div class="plan-name">Starter</div>
+        <div class="price">$997 <span>/ month</span></div>
+        <div class="plan-desc">Launch secure OTT quickly for small teams.</div>
 
-        <a href="#" class="btn-primary">Start free trial</a>
-      </div>
-
-      <!-- FILES STARTER -->
-      <div class="card recommended">
-        <div class="badge">Most popular</div>
-        <div class="plan-name">Starter Pack</div>
-        <div class="price">$497 <span>/ month</span></div>
-        <div class="plan-desc">
-          Unlimited secure screeners, file delivery, and review tools for
-          growing teams.
-        </div>
+        <ul class="features">
+          <li><span class="check">✓</span> Secure watermark-protected playback</li>
+          <li><span class="check">✓</span> Limited library size</li>
+          <li><span class="check">✓</span> Basic user access controls</li>
+        </ul>
 
         <a href="#" class="btn-primary">Get started</a>
       </div>
 
-      <!-- FILES ENTERPRISE -->
+      <!-- OTT PRO -->
+      <div class="card recommended">
+        <div class="badge">Most popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="price">$1,299 <span>/ month</span></div>
+        <div class="plan-desc">Advanced OTT delivery with analytics and scale.</div>
+
+        <ul class="features">
+          <li><span class="check">✓</span> Unlimited secure screeners</li>
+          <li><span class="check">✓</span> Viewer analytics & engagement data</li>
+          <li><span class="check">✓</span> Advanced permissions & roles</li>
+          <li><span class="check">✓</span> Branded OTT experience</li>
+        </ul>
+
+        <a href="#" class="btn-primary">Get started</a>
+      </div>
+
+      <!-- OTT ENTERPRISE -->
       <div class="card">
         <div class="plan-name">Enterprise</div>
         <div class="price">Custom</div>
         <div class="plan-desc">
-          Advanced permissions, SSO, large-scale libraries, and dedicated
-          support.
+          Designed for complex OTT use cases with custom security, scale,
+          and integrations.
         </div>
+
+        <ul class="features">
+          <li><span class="check">✓</span> Ideal for airlines, awards & global studios</li>
+          <li><span class="check">✓</span> Custom security & compliance requirements</li>
+          <li><span class="check">✓</span> Dedicated onboarding & support</li>
+        </ul>
 
         <a href="#" class="btn-outline">Contact sales</a>
       </div>
-  </section>
-</body>
-</html>
+    </div>
+  </div>
+</section>
